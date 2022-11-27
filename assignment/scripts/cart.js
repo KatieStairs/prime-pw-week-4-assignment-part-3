@@ -17,18 +17,26 @@ console.log(`Basket is ${basket}`);
 console.log('Adding apples (expect true)', addItem('apples'));
 console.log(`Basket is now ${basket}`);
 
-basket.forEach(function (item) {
-    console.log(item);
-});
 
-
-function empty(basket){
-    console.log('start empty', basket);
-    while (basket.length > 0){
-        console.log('in empty', basket);
-        basket.pop();
-    }
-    return true;
+function listItems(basket) {
+    for (let i=0; i<basket.length; i++){
+    console.log(basket[i]);
+    } 
 }
 
-console.log('Basket empty', empty(basket));
+console.log(listItems(basket));
+
+//function empty(basket){
+    //console.log('start empty', basket);
+    //while (basket.length > 0){
+        //console.log('in empty', basket);
+        //basket.pop();
+    //}
+    //return true;
+//}
+
+function empty(basket){
+    basket = [];
+ return (basket);
+}
+console.log("Basket is empty", empty(basket));
